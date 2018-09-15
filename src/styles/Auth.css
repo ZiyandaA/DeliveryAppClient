@@ -49,6 +49,7 @@ input {
 }
 
 .my-text-center {
+  display: block;
   text-align: center !important;
 }
 

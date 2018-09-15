@@ -169,6 +169,12 @@ td select {
   margin-top: -10px
 }
 
+.footerLink {
+  color: white;
+}
+.footerLink:hover {
+  text-decoration: underline;
+}
 @media (min-width:720px) {
   #middleContainer .middleBox {
     margin: auto;

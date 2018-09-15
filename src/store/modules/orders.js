@@ -12,33 +12,33 @@ const FETCH_ORDERS = 'orders/FETCH';
 export const createOrderAction = (order) => {
     return asyncAction(
         CREATE_ORDER,
-        axios.post("/orders", { order }),
+        axios.post("https://delivery-app-server.herokuapp.com/orders", { order }),
     )
 };
 
 export const getOrderAction = (id) => {
     return asyncAction(
-      FETCH_ORDER,
-        axios.get(`http://localhost:3000/orders/${id}`)
+        FETCH_ORDER,
+        axios.get(`https://delivery-app-server.herokuapp.com/orders/${id}`)
     )
 };
 
 export const getOrdersAction = () => {
     return asyncAction(
         FETCH_ORDERS,
-        axios.get(`http://localhost:3000/orders`)
+        axios.get(`https://delivery-app-server.herokuapp.com/orders`)
     )
 };
 
 export const updateOrderAction = (id, order) => asyncAction(
     UPDATE_ORDER,
-    axios.put(`http://localhost:3000/orders/${id}`, { order })
+    axios.put(`https://delivery-app-server.herokuapp.com/orders/${id}`, { order })
 );
 
 export const deleteOrderAction = (id) => {
     return asyncAction(
         DELETE_ORDER,
-        axios.delete(`http://localhost:3000/orders/${id}`),
+        axios.delete(`https://delivery-app-server.herokuapp.com/orders/${id}`),
         (res) => {
             alert(res.message);
         },
@@ -48,7 +48,7 @@ export const deleteOrderAction = (id) => {
 
 export const confirmOrderAction = (email, id) => asyncAction(
     CONFIRM_ORDER,
-    axios.put(`http://localhost:3000/orders/${id}/confirm`, {
+    axios.put(`https://delivery-app-server.herokuapp.com/orders/${id}/confirm`, {
         email
     }),
     (res) => {

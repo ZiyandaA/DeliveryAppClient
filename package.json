@@ -2,9 +2,14 @@
   "name": "delivery_client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "axios": "^0.18.0",
+    "jsonwebtoken": "^8.3.0",
     "moment": "^2.22.2",
     "query-string": "^6.1.0",
     "react": "^16.4.1",
@@ -14,15 +19,16 @@
     "react-scripts": "^1.1.5",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "thunk": "0.0.1"
+    "thunk": "0.0.1",
+    "toastr": "^2.1.4",
+    "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
-    "start": "PORT=5000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3000",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.5"
   }

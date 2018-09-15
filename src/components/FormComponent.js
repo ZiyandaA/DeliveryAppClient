@@ -41,6 +41,7 @@ const StoreLocation = ({background, name, address, onSelect, selected}) => {
                 color: 'red',
                 padding: '20px 10px',
                 fontSize: 20,
+                width :'92%',
 
             }}
         >{address}</div>
@@ -164,7 +165,7 @@ const formItemProps = [
 class FormComponent extends Component {
     formData = {
         service: "pick-up",
-        customer_name: "John Smith ",
+        customer_name: this.props.user.name,
         notes: "",
         customer_address: "370 19th Street Brookly NY 11215",
         our_address: "50 West 17th Street New York 10011",
@@ -505,10 +506,11 @@ class FormComponent extends Component {
     }
 }
 
-function mapStateToProps({ orders }) {
+function mapStateToProps({ orders, auth }) {
     return {
         order: orders.detail,
-        isLoadingDetail: orders.isLoadingDetail
+        isLoadingDetail: orders.isLoadingDetail,
+        user: auth.user,
     }
 };
 
