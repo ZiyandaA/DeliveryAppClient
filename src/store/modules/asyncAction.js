@@ -13,13 +13,13 @@ const AsyncAction = (
         })
         .catch((err) => {
             console.log('error:', err);
-            console.log(err.response.data);
+            console.log(err && err.response && err.response.data);
             dispatch({
                 type: `${type}_REJECTED`,
                 error: true,
-                payload: err.response.data,
+                payload: err && err.response && err.response.data,
             });
-            failureCallBack(err.response.data, dispatch);
+            failureCallBack(err && err.response && err.response.data);
             return err;
         })
 };

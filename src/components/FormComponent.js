@@ -17,12 +17,6 @@ const mainBGColor = '#024fa2';
 const StoreLocation = ({background, name, address, onSelect, selected}) => {
     return <div
         onClick={() => onSelect(address)}
-        style={{
-            display: 'inline-block',
-            width: 200,
-            marginRight: 10,
-            cursor: 'pointer'
-        }}
     >
         <div
             style={{
@@ -37,11 +31,7 @@ const StoreLocation = ({background, name, address, onSelect, selected}) => {
             className="location-img"
             style={{
                 backgroundImage: `url(${background})`,
-                backgroundSize: 'cover',
-                color: 'red',
-                padding: '20px 10px',
-                fontSize: 20,
-                width :'92%',
+                
 
             }}
         >{address}</div>
@@ -397,20 +387,23 @@ class FormComponent extends Component {
                                                     />
                                                 </div>
                                             <div>
-                                            <div className="my-form-group">
-                                                <label>Select Location:</label>
+                                            <label>Select Location:</label>
+                                            <div className="my-form-group store-location-group">
+                                                
                                                 <div className="store-location">
                                                     <StoreLocation
                                                         name={'Manhattan'}
                                                         address={'50 West 17th Street New York 10011'}
-                                                        background={'http://www.yellowmaps.com/maps/img/US/political/Minnesota-political-map-796.jpg'}
+                                                        background={'/Map.jpg'}
                                                         onSelect={this.onLocationChange}
                                                         selected={our_address === '50 West 17th Street New York 10011'}
                                                     />
+                                                    </div>
+                                                    <div className="store-location">
                                                     <StoreLocation
                                                         name={'Brooklyn'}
                                                         address={'370 19th Street Brookly NY 11215'}
-                                                        background={'http://www.yellowmaps.com/maps/img/US/political/Minnesota-political-map-796.jpg'}
+                                                        background={'/Map.jpg'}
                                                         onSelect={this.onLocationChange}
                                                         selected={our_address === '370 19th Street Brookly NY 11215'}
                                                     />
@@ -461,7 +454,7 @@ class FormComponent extends Component {
                                                                     <input
                                                                         type="date"
                                                                         name="date_time"
-                                                                        className="my-form-control"
+                                                                        className="my-form-control width-inherit"
                                                                         value={date_time}
                                                                         onChange={this.handleChange}
                                                                         min={minDateStr}
@@ -475,7 +468,7 @@ class FormComponent extends Component {
                                                                     <textarea
                                                                         name="notes"
                                                                         value={notes}
-                                                                        className="my-form-control"
+                                                                        className="my-form-control width-inherit"
                                                                         onChange={this.handleChange}
                                                                     />
                                                                 </td>

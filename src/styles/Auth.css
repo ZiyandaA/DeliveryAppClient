@@ -3,11 +3,17 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+/* a {
+  /* font-size: 12px;
+  color: white;
+  text-decoration: none;
+} */ */
+
 a {
+
   font-size: 12px;
   color: #0069B1;
-  text-decoration: none
-}
+};
 
 input {
   margin: 0;
@@ -51,6 +57,11 @@ input {
 .my-text-center {
   display: block;
   text-align: center !important;
+}
+
+.account-text {
+  color: #003459;
+  cursor: pointer;
 }
 
 .my-form-control {

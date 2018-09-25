@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import toast from 'toastr';
 import {connect} from 'react-redux';
 import { logoutAction } from '../store/modules/auth'
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -19,6 +19,7 @@ class Header extends Component {
         //         console.log(data)
         //     })
         this.props.logoutUser();
+        this.props.history.push("/")
         toast.success('Logout successful');
     }
     renderAuthButtons() {
@@ -42,9 +43,10 @@ class Header extends Component {
     }
     render() {
         const { loggedIn } = this.props;
+    if (!loggedIn) return (<div></div>);
         return(
             <div className="logout">
-                { this.props.loggedIn ?
+                { loggedIn ?
                     this.renderAuthButtons() : null}
             </div>
         )

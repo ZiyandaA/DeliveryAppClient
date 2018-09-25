@@ -8,37 +8,37 @@ const DELETE_ORDER = 'order/DELETE';
 const CONFIRM_ORDER = 'order/CONFIRM';
 const UPDATE_ORDER = 'order/UPDATE';
 const FETCH_ORDERS = 'orders/FETCH';
-
+const host = process.env.PRODUCTION =='true'?"https://delivery-app-server.herokuapp.com":"http://localhost:3000"
 export const createOrderAction = (order) => {
     return asyncAction(
         CREATE_ORDER,
-        axios.post("https://delivery-app-server.herokuapp.com/orders", { order }),
+        axios.post(`${host}/orders`, { order }),
     )
 };
 
 export const getOrderAction = (id) => {
     return asyncAction(
         FETCH_ORDER,
-        axios.get(`https://delivery-app-server.herokuapp.com/orders/${id}`)
+        axios.get(`${host}/orders/${id}`)
     )
 };
 
 export const getOrdersAction = () => {
     return asyncAction(
         FETCH_ORDERS,
-        axios.get(`https://delivery-app-server.herokuapp.com/orders`)
+        axios.get(`${host}/orders`)
     )
 };
 
 export const updateOrderAction = (id, order) => asyncAction(
     UPDATE_ORDER,
-    axios.put(`https://delivery-app-server.herokuapp.com/orders/${id}`, { order })
+    axios.put(`${host}/orders/${id}`, { order })
 );
 
 export const deleteOrderAction = (id) => {
     return asyncAction(
         DELETE_ORDER,
-        axios.delete(`https://delivery-app-server.herokuapp.com/orders/${id}`),
+        axios.delete(`${host}/orders/${id}`),
         (res) => {
             alert(res.message);
         },
@@ -48,7 +48,7 @@ export const deleteOrderAction = (id) => {
 
 export const confirmOrderAction = (email, id) => asyncAction(
     CONFIRM_ORDER,
-    axios.put(`https://delivery-app-server.herokuapp.com/orders/${id}/confirm`, {
+    axios.put(`${host}/orders/${id}/confirm`, {
         email
     }),
     (res) => {
