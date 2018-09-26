@@ -185,7 +185,7 @@ td .width-inherit {
    /* width: 50%; */
     font-size: 18px; 
     font-weight: bold;
-     font-family: 'Playfair Display'
+     font-family: 'sans-serif'
 }
 .secondBanner {
   height: 100%;
@@ -198,8 +198,8 @@ td .width-inherit {
 }
 
 .secondBanner {
-  background-color: #09090990;
-  height: 100%;
+  background-color:white;
+  height: 250px;
   width: 100%;
   z-Index: 19;
   position: relative;
@@ -268,11 +268,11 @@ td .width-inherit {
     flex-basis: 80%;
   }
   .secondBanner .welcome > p {
-    color: black;
+    color: #00345c;
     text-align: center; 
     font-size: 18px; 
     font-weight: bold;
-    font-family: 'Playfair Display'
+    font-family: 'sans-serif'
   }
   
   .secondBanner .auth-part {

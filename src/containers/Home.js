@@ -91,8 +91,8 @@ const SecondBannerComponent = ({ history }) => (
             <img  alt="banner" src="https://images.unsplash.com/photo-1522074534099-45b66be3f193?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1120af654449ab8c8e2247989f0bff2f&auto=format&fit=crop&w=800&q=60" style={{ objectFit: 'cover', width: '100%',  position: 'absolute', top: 0, height: '100%' }}/>
             { /* overlay */}
             <div className="login-part">
-                <div className="hoverable-button"  onClick={() => history.push('/login')} style={{ color: 'white',  backgroundColor: '#003459', height: '50px', width: '120px', marginRight: '10px', borderRadius: '5px', textAlign: 'center', paddingTop: '13px', fontSize: '14px'}}> Login </div>
-                <div  className="hoverable-button" onClick={() => history.push('/register')} style={{ color: 'white',  backgroundColor: 'green', height: '50px', width: '120px', borderRadius: '5px', textAlign: 'center', paddingTop: '13px', fontSize: '14px'  }}> Sign Up </div>
+                <div className="hoverable-button"  onClick={() => history.push('/login')} style={{ color: 'white',  backgroundColor: '#003459', width: '120px', marginRight: '10px', borderRadius: '5px', textAlign: 'center', paddingTop: '20px',paddingBottom:'20px', fontSize: '14px'}}> Login </div>
+                <div  className="hoverable-button" onClick={() => history.push('/register')} style={{ color: 'white',  backgroundColor: 'green', width: '120px', borderRadius: '5px', textAlign: 'center',  paddingTop: '20px',paddingBottom:'20px',  fontSize: '14px'  }}> Sign Up </div>
             </div>
             { /* end of overlay */}
          </div>
@@ -106,8 +106,8 @@ const SecondBannerComponent = ({ history }) => (
  */
 const FooterComponent = () => (
     <div style={{ width: '100%', backgroundColor: '#4D5656', paddingTop: '10px'}}>
-        <p style={{ textAlign: 'center', color: 'white', fontFamily: 'Playfair Display' }}> Designed by Ziyanda Ayd  </p>
-        <p style={{ textAlign: 'center', color: 'white', fontFamily: 'Playfair Display' }}> copyright &copy; 2018 All Rights Reserved</p><p style={{ textAlign: 'center', color: 'white', fontFamily: 'Playfair Display' }}>Contact information: 8456451447 <a href="mailto:ziyandaayd@gmail.com" className="footerLink">
+        <p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}> Designed by Ziyanda Ayd  </p>
+        <p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}> copyright &copy; 2018 All Rights Reserved</p><p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}>Contact information: 8456451447 <a href="mailto:ziyandaayd@gmail.com" className="footerLink">
  ziyandaayd@gmail.com</a>.</p>
     </div>
 )

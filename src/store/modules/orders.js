@@ -8,7 +8,7 @@ const DELETE_ORDER = 'order/DELETE';
 const CONFIRM_ORDER = 'order/CONFIRM';
 const UPDATE_ORDER = 'order/UPDATE';
 const FETCH_ORDERS = 'orders/FETCH';
-const host = process.env.PRODUCTION ==true?"https://delivery-app-server.herokuapp.com":"http://localhost:3000"
+const host = process.env.PRODUCTION ==="true"?"https://delivery-app-server.herokuapp.com":"http://localhost:3000"
 export const createOrderAction = (order) => {
     return asyncAction(
         CREATE_ORDER,

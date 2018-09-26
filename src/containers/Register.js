@@ -44,11 +44,11 @@ class Register extends Component {
     handleSubmit(authMode) {
         console.log(authMode);
         this.setState({ isLoading: true });
-        let url = "https://delivery-app-server.herokuapp.com/users/";
+        let url = 'http://localhost:3000/users'
         if(authMode === "login") {
-            url += "signin"
+            url += "/signin"
         }else if(authMode === "register") {
-            url += "signup"
+            url += "/signup"
         }
         let {name, password} = this.state;
 
@@ -67,8 +67,9 @@ class Register extends Component {
             })
             .catch(err => {
                 this.setState({ isLoading: false });
-                const { message } = err.response.data;
-                toast.error(message);
+                // const { message } = err.response;
+                // toast.error(message);
+                console.log(err)
                 // alert(err.response.data.message);
             })
     }
