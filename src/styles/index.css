@@ -5,8 +5,8 @@
   height: auto;
   display: flex;
 }
-h1 {margin-left: -9999999em;
-}
+/* h1 {margin-left: -9999999em;
+} */
 #middleContainer .rightSide {
   background-color: #0069B1;
   background-repeat: no-repeat;
