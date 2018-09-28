@@ -13,10 +13,6 @@ import store from './store'
 import registerServiceWorker from './registerServiceWorker';
 
 
-// import {loggedIn_PROP ,
-//
-// } from './constants/actions';
-
 
 ReactDOM.render(
 <Provider store={store} >

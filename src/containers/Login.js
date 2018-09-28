@@ -28,14 +28,5 @@ class Login extends Component {
         )
     }
 }
-/*
-1. Create 2 inputs for username and pass
-2. create fields in the state fo them
-3. Create handlers(onCLick functions)
-4. Create submit button
-5. create onSubmit event to send post request to the signin endpoint on the server
-6. Display successs message (or error message)
 
-
-*/
 export default Login;

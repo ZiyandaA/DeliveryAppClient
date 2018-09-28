@@ -28,19 +28,6 @@ class Register extends Component {
         })
     }
 
-    //this function to sign up the user.
-
-    /*
-        1. Check the url.
-        2. If we are on the register, we request for signup
-        3. if we on login, we request for signin
-        4. If there is no errors, we redirect user to the homepage
-    */
-
-    /*
-        1. If we are on the register, display "Register" message
-        2. Else, display "Login"
-    */
     handleSubmit(authMode) {
         console.log(authMode);
         this.setState({ isLoading: true });

@@ -28,7 +28,7 @@ class OrdersComponent extends Component {
                         <div className="my-container">
                             <div className="my-responsive-table res-order white-bg-color">
                             <Link to={`/`}>Create New Order </Link>
-                            {/* <a href="/" className="new-order"><strong>Create new order</strong></a> */}
+                            
                                 <table className="table order-list-table">
                                     <thead>
                                         <tr>

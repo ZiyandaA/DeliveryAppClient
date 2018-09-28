@@ -24,20 +24,7 @@ class App extends Component {
       loggedIn: false
     };
   }
-  /*
-    1. Mount methods.
-      a) ComponentWillMount
-      b) ComponentDidMount
-  */
-  // componentDidMount() {
-  //   axios.get('/check')
-  //       .then(data => {
-  //         store.dispatch(loginAction());
-  //       })
-  //       .catch(error => {
-  //         console.log(error.response)
-  //     });
-  // };
+
 
   
   render() {

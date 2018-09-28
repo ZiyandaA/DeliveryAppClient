@@ -58,7 +58,10 @@ const FormItem = ({name, onChangeOption, onChange, label, index, options =[], fo
         </select>
         </td>
         <td>
+        <label></label>    
         <input
+    
+        aria-label ="quantity"
             className="my-form-control quantity"
             type={'number'}
             name={name}
@@ -71,6 +74,7 @@ const FormItem = ({name, onChangeOption, onChange, label, index, options =[], fo
 
 const formItemProps = [
     {
+    
         name:'bins',
         label: 'Bins',
         options: [
@@ -121,6 +125,7 @@ const formItemProps = [
         ]
     },
     {
+       
         name:'additional',
         label: 'Additional Fees',
         options: [
@@ -152,13 +157,14 @@ const formItemProps = [
     },
 ];
 
+
 class FormComponent extends Component {
     formData = {
         service: "pick-up",
         customer_name: this.props.user.name,
         notes: "",
-        customer_address: "370 19th Street Brookly NY 11215",
-        our_address: "50 West 17th Street New York 10011",
+        customer_address: "",
+        our_address: "",
         bins:  {
             type: "0",
             quantity: 0
@@ -363,20 +369,23 @@ class FormComponent extends Component {
                                         >
                                             <div>
                                                 <div className="my-form-group select">
-                                                    <label htmlFor="emailInput">Select Service:</label>
-                                                    <select
+                                                    <label htmlFor= "select-input" >Select Service:</label>
+                                                
+                                                    <select className="service-type"
+                                                    id= "select-input"
                                                         name={'service'}
                                                         value={service}
                                                         onChange={this.handleChange}
                                                         required
                                                     >
-                                                        <option value="delivery">Delivery</option>
-                                                        <option value="pick-up">Pick Up</option>
+                                                        <option value ="delivery">Delivery</option>
+                                                        <option  value ="pick-up">Pick Up</option>
                                                     </select>
                                                 </div>
                                                 <div className="my-form-group">
-                                                    <label htmlFor="customerNameInput">Customer Name:</label>
+                                                    <label htmlFor="customerNameInput" >Customer Name:</label>
                                                     <input
+                                                    aria-label="Customer Name"
                                                         className="my-form-control"
                                                         type="text"
                                                         value={customer_name}
@@ -413,6 +422,7 @@ class FormComponent extends Component {
                                                 <div className="my-form-group">
                                                     <label htmlFor="customerNameInput">Customer Address: {customer_address}</label>
                                                     <input
+                                                        aria-label="customerNameInput"
                                                         className="my-form-control"
                                                         id="customerAddressInput"
                                                         type="text"
@@ -452,6 +462,7 @@ class FormComponent extends Component {
                                                                 <th scope="row">Order Date</th>
                                                                 <td colSpan="2">
                                                                     <input
+                                                                    aria-label="Order date"
                                                                         type="date"
                                                                         name="date_time"
                                                                         className="my-form-control width-inherit"
@@ -466,6 +477,7 @@ class FormComponent extends Component {
                                                                 <th scope="row">Notes</th>
                                                                 <td colSpan="2">
                                                                     <textarea
+                                                                    aria-label="notes"
                                                                         name="notes"
                                                                         value={notes}
                                                                         className="my-form-control width-inherit"

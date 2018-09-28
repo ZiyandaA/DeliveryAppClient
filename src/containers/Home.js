@@ -30,8 +30,9 @@ class Home extends Component {
         // rather than the landing components you might find below
         if(this.props.loggedIn) {
         return(
-            <div>
-                {/* <div className="home" style={{fontSize: 30, color: 'white'}}>Home</div> */}
+           
+            <div role="main">
+            
                 <FormComponent {...formProps}/>
                 <p>
                 </p>
@@ -39,7 +40,7 @@ class Home extends Component {
         )
     }
         return(
-            <div className="home-page">
+            <div role="main" className="home-page">
                 <HeaderComponent />
                 <BannerComponent />
                 <SecondBannerComponent   history={this.props.history} />
@@ -49,8 +50,7 @@ class Home extends Component {
     }
 }
 
-// you might want to refactor the components below since they are core logic distracting
-// and might be out of place
+
 /**
  * @name BannerComponent
  * @description This is the main banner that is displaed on the landing page
@@ -91,8 +91,8 @@ const SecondBannerComponent = ({ history }) => (
             <img  alt="banner" src="https://images.unsplash.com/photo-1522074534099-45b66be3f193?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1120af654449ab8c8e2247989f0bff2f&auto=format&fit=crop&w=800&q=60" style={{ objectFit: 'cover', width: '100%',  position: 'absolute', top: 0, height: '100%' }}/>
             { /* overlay */}
             <div className="login-part">
-                <div className="hoverable-button"  onClick={() => history.push('/login')} style={{ color: 'white',  backgroundColor: '#003459', width: '120px', marginRight: '10px', borderRadius: '5px', textAlign: 'center', paddingTop: '20px',paddingBottom:'20px', fontSize: '14px'}}> Login </div>
-                <div  className="hoverable-button" onClick={() => history.push('/register')} style={{ color: 'white',  backgroundColor: 'green', width: '120px', borderRadius: '5px', textAlign: 'center',  paddingTop: '20px',paddingBottom:'20px',  fontSize: '14px'  }}> Sign Up </div>
+                <div  role="button" className="hoverable-button"  onClick={() => history.push('/login')} style={{ color: 'white',  backgroundColor: '#003459', width: '120px', marginRight: '10px', borderRadius: '5px', textAlign: 'center', paddingTop: '20px',paddingBottom:'20px', fontSize: '14px'}}> Login </div>
+                <div   role="button" className="hoverable-button" onClick={() => history.push('/register')} style={{ color: 'white',  backgroundColor: 'green', width: '120px', borderRadius: '5px', textAlign: 'center',  paddingTop: '20px',paddingBottom:'20px',  fontSize: '14px'  }}> Sign Up </div>
             </div>
             { /* end of overlay */}
          </div>
@@ -105,7 +105,7 @@ const SecondBannerComponent = ({ history }) => (
  * @returns {function} React Component
  */
 const FooterComponent = () => (
-    <div style={{ width: '100%', backgroundColor: '#4D5656', paddingTop: '10px'}}>
+    <div style={{ width: '100%', backgroundColor: '#4D5656', paddingTop: '10px', position: "fixed", bottom:0}}>
         <p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}> Designed by Ziyanda Ayd  </p>
         <p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}> copyright &copy; 2018 All Rights Reserved</p><p style={{ textAlign: 'center', color: 'white', fontFamily: 'sans-serif' }}>Contact information: 8456451447 <a href="mailto:ziyandaayd@gmail.com" className="footerLink">
  ziyandaayd@gmail.com</a>.</p>

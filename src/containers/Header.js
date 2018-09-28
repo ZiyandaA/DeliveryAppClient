@@ -11,13 +11,7 @@ class Header extends Component {
     }
 
     logOut() {
-        // axios.post("/users/logout")
-        //     .then(data => {
-        //         this.props.changeLoginStatus();
-        //         this.props.history.push("/login");
-
-        //         console.log(data)
-        //     })
+     
         this.props.logoutUser();
         this.props.history.push("/")
         toast.success('Logout successful');
@@ -25,27 +19,17 @@ class Header extends Component {
     renderAuthButtons() {
         return (
             <div>
-                <button onClick={() => this.props.history.push('/')} className="logout-btn my-button" style={{float: 'left', fontSize:'15px'}}>Home</button>
-                <button onClick={this.logOut} className="logout-btn my-button" style={{float: 'right', fontSize:'15px'}}>logout</button>
+                <button   onClick={() => this.props.history.push('/')} className="logout-btn my-button"  style={{float: 'left', fontSize:'15px'}}>New Order</button>
+                <button  onClick={this.logOut} className="logout-btn my-button" style={{float: 'right', fontSize:'15px'}}>logout</button>
             </div>
         );
-        // if (this.props.loggedIn) {
-        //     return (
-        //         <div>
-        //             <button onClick={() => this.props.history.push('/')} className="logout-btn my-button" style={{float: 'left', fontSize:'15px'}}>Home</button>
-        //             <button onClick={this.logOut} className="logout-btn my-button" style={{float: 'right', fontSize:'15px'}}>logout</button>
-        //         </div>
-        //     );
-        // }
-        // else {
-        //     return <div><Link to="/login">login</Link>, <Link to="/register">register</Link></div>
-        // }
+      
     }
     render() {
         const { loggedIn } = this.props;
     if (!loggedIn) return (<div></div>);
         return(
-            <div className="logout">
+            <div role="heading" aria-level="1" className="logout">
                 { loggedIn ?
                     this.renderAuthButtons() : null}
             </div>

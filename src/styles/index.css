@@ -5,6 +5,8 @@
   height: auto;
   display: flex;
 }
+h1 {margin-left: -9999999em;
+}
 #middleContainer .rightSide {
   background-color: #0069B1;
   background-repeat: no-repeat;
@@ -18,8 +20,7 @@
   overflow: scroll;
 }
 #middleContainer .first-container {
-  /* display: flex; */
-  /* flex-direction: column; */
+
   width: 90%;
   margin: auto;
   padding: 0;
@@ -32,8 +33,7 @@
 }
 #middleContainer .middleBox .left-box,
 .left-box-inner {
-  /* flex-basis: 100%;
-  display: flex; */
+
   width: 100%;
   
 };
@@ -43,9 +43,7 @@
   flex-direction: column;
   padding: 10px;
 }
-/* .the-right {
 
-} */
 .first-container .left-box-inner .leftSide {
   padding: 10px 0;
 };
@@ -99,6 +97,7 @@ td select:focus-within,
   padding: 20px 10px;
   font-size: 20px;
   /* width: 92%; */
+  height: 90px;
 }
 
 .from-button {
@@ -283,16 +282,7 @@ td .width-inherit {
     justify-content: center;
   }
 }
-@media (min-width: 1400px) {
-  .store-location {
-    width: 50%;
-    margin: auto;
-  }
-  .location-img {
-      height: 150px;
-  }
-  
-}
+
 @media (max-width: 472px) {
   .store-location {
     width: 100%;
@@ -304,15 +294,6 @@ td .width-inherit {
   
 }
 
-@media (max-width: 1400px) {
-  .location-img {
-      height: 100px;
-  }
-}
-
-/* .logout {
-  display: none;
-} */
 @media only screen and (max-width: 599px) {
   .secondBanner {
     flex-direction: column;
@@ -348,6 +329,9 @@ td .width-inherit {
     height: 34px !important;
   }
 } 
+.service-type {
+  font-size:10px;
+}
 
 @media only screen and (min-width: 600px) {
   .secondBanner {
@@ -360,25 +344,10 @@ td .width-inherit {
   }
 
   }
-/*
-@media screen and (max-width: 424px) {
-  .store-location{
-    width: 35%;
-  }
-}
-*/
-/* @media screen and (min-width: 424px) and (max-width: 500px) {
-  .location-img {
-    width: 88% !important
-  }
-} */
+
 
  @media screen and (min-width: 425px) and (max-width: 525px) {
-/*
-  .location-img {
-    width: 90% !important 
-  }
-*/
+
 .store-location  {
  float: left;
 }

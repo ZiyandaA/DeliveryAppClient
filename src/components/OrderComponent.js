@@ -234,5 +234,5 @@ function mapDispatchToProps(dispatch) {
         confirmOrder: (email, id) => dispatch(confirmOrderAction(email, id))
     }
 }
-// export default connect(mapStateToProps, mapDispatchToProps)(OrdersComponent);
+
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OrderComponent));
