@@ -1,6 +1,6 @@
-## ARC Messenger Delivery App!
+## ARC Messenger System App!
 
-Not Just Luck is an interactive full-stack web app that helps users overcome impostor syndrome by guiding them to see the history of their own successes as well as the skills and traits that made those successes possible.
+Is a messenger delivery quoting system for ARC clients , which provide a delivery Price quote that is fast and secure. Because ARC provides film equipment in a forever changing and fast film industry. ARC Messenger system is enabling a future where delivery is almost as quick as you thinking about it, and it all starts with a quote.
 
 ## Screenshots
 
@@ -11,9 +11,9 @@ Not Just Luck is an interactive full-stack web app that helps users overcome imp
 
 In the project directory, you can run:
 
-### `npm start`
+# `npm start`
 
-Runs the app in the development mode.<br>
+# Runs the app in the development mode.<br>
 Open [https://arc-messenger-system.herokuapp.com](https://arc-messenger-system.herokuapp.com) to view it in the browser.
 
 The page will reload if you make edits.<br>
