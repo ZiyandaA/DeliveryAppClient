@@ -11,5 +11,5 @@ Is a messenger delivery quoting system for ARC clients , which provide a deliver
 # Runs the app in the development mode.<br>
 Open [ https://arc-messenger-pricing-system.herokuapp.com]( https://arc-messenger-pricing-system.herokuapp.com) to view it in the browser.
 
-Test Username: test11<br>
+Test Username: test<br>
 passowrd :1234.
