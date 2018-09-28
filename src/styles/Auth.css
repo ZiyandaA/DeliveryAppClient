@@ -150,6 +150,7 @@ input {
 .logout {
   margin: 20px;
   height: 26px;
+  position: relative;
 }
 
 @media (min-width: 720px) {
