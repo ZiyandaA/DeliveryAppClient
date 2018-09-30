@@ -85,7 +85,7 @@ const BannerComponent = () => (
 const SecondBannerComponent = ({ history }) => (
     <nav className="secondBanner">
         <div className="welcome">
-            <p> We provide a delivery Price quote that is fast and secure. We believe in enabling a future where delivery is almost as quick as you thinking about it, and it all starts with a quote. Log in to get yours. </p>
+            <p> We provide a delivery Price quote that is fast and secure. Because ARC provides film equipment in a forever changing and fast film industry. ARC Messenger system is enabling a future where delivery is almost as quick as you thinking about it, and it all starts with a quote. </p>
             </div>
             <div className="auth-part">
             <img  alt="banner" src="https://images.unsplash.com/photo-1522074534099-45b66be3f193?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1120af654449ab8c8e2247989f0bff2f&auto=format&fit=crop&w=800&q=60" style={{ objectFit: 'cover', width: '100%',  position: 'absolute', top: 0, height: '100%' }}/>
