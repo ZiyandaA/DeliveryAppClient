@@ -18,17 +18,15 @@ class Header extends Component {
     }
     renderAuthButtons() {
         return (
-            <navigation>
+   
                 <div>
                 <button   onClick={() => this.props.history.push('/')} className="logout-btn my-button"  style={{float: 'left', fontSize:'15px'}}>New Order</button>
 
-                </div>
-                <div>
+         
                 <button  onClick={this.logOut} className="logout-btn my-button" style={{float: 'right', fontSize:'15px'}}>logout</button>
 
-
                 </div>
-            </navigation>
+      
         );
       
     }

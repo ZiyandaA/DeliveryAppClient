@@ -189,8 +189,11 @@ class FormComponent extends Component {
     constructor(props) {
         super(props);
 
+        console.log(this.props);
+
         this.state = {
             ...this.formData,
+            customer_name: ""
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeOption = this.handleChangeOption.bind(this);
@@ -341,6 +344,8 @@ class FormComponent extends Component {
             our_address,
             customer_address
         } = this.state;
+
+
 
         const minDateStr = moment().format('YYYY-MM-DD');
         const { mode, order, isLoadingDetail }  = this.props;
