@@ -50,11 +50,11 @@ class Register extends Component {
             setAuthorizationToken(token);
             this.props.changeLoginStatus(user);
 
-            let message = authMode == "login" ? "Login Success" : "Registration Success";
+            let message = authMode === "login" ? "Login Success" : "Registration Success";
             toast.success(message);
         } catch (e) {
             this.setState({ isLoading: false });
-            let message = authMode == "login" ? "Login Failed" : "Registration Failed";
+            let message = authMode === "login" ? "Login Failed" : "Registration Failed";
             toast.error(message);
         }
    
