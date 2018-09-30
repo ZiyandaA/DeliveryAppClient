@@ -31,21 +31,21 @@ class Home extends Component {
         if(this.props.loggedIn) {
         return(
            
-            <div role="main">
+            <main>
             
                 <FormComponent {...formProps}/>
                 <p>
                 </p>
-            </div>
+            </main>
         )
     }
         return(
-            <div role="main" className="home-page">
+            <main className="home-page">
                 <HeaderComponent />
                 <BannerComponent />
                 <SecondBannerComponent   history={this.props.history} />
                 <FooterComponent />
-            </div>
+            </main>
         )
     }
 }
@@ -83,7 +83,7 @@ const BannerComponent = () => (
  * @returns {function} React Component
  */
 const SecondBannerComponent = ({ history }) => (
-    <div className="secondBanner">
+    <nav className="secondBanner">
         <div className="welcome">
             <p> We provide a delivery Price quote that is fast and secure. We believe in enabling a future where delivery is almost as quick as you thinking about it, and it all starts with a quote. Log in to get yours. </p>
             </div>
@@ -96,7 +96,7 @@ const SecondBannerComponent = ({ history }) => (
             </div>
             { /* end of overlay */}
          </div>
-    </div>
+    </nav>
 )
 
 /**
@@ -118,7 +118,7 @@ const FooterComponent = () => (
  */
 const HeaderComponent = () => (
     <div className="header">
-        <img className="logo" alt="logo" src={logo}/>
+        <img className="logo" alt="logo" src={logo}/><h1>aa</h1>
         <p style={{ color: 'white', textAlign: 'center',  }}></p>
     </div>
 )

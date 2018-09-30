@@ -28,8 +28,8 @@ class Register extends Component {
         })
     }
 
-    handleSubmit(authMode) {
-        console.log(authMode);
+    async handleSubmit(authMode) {
+        // console.log(authMode);
         this.setState({ isLoading: true });
         let url = 'http://localhost:3000/users'
         if(authMode === "login") {
@@ -39,26 +39,26 @@ class Register extends Component {
         }
         let {name, password} = this.state;
 
-        axios.post(url, {
-            name,
-            password,
-        })
-            .then(response => {
-                this.setState({ isLoading: false });
-                const { user, token, message } = response.data;
-                console.log(message)
-                localStorage.setItem('accessToken', token);
-                setAuthorizationToken(token);
-                this.props.changeLoginStatus(user);
-                toast.success(message);
+        try {
+            let res = await axios.post(url, {
+                name,
+                password
             })
-            .catch(err => {
-                this.setState({ isLoading: false });
-                // const { message } = err.response;
-                // toast.error(message);
-                console.log(err)
-                // alert(err.response.data.message);
-            })
+            this.setState({ isLoading: false });
+            const { token, user } = res.data;
+            localStorage.setItem('accessToken', token);
+            setAuthorizationToken(token);
+            this.props.changeLoginStatus(user);
+
+            let message = authMode == "login" ? "Login Success" : "Registration Success";
+            toast.success(message);
+        } catch (e) {
+            this.setState({ isLoading: false });
+            let message = authMode == "login" ? "Login Failed" : "Registration Failed";
+            toast.error(message);
+        }
+   
+
     }
 
 

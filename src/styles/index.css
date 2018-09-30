@@ -370,3 +370,7 @@ td .width-inherit {
     padding: 0.4rem;
   }
 }
+
+h1 {
+  display: none;
+}

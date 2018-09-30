@@ -18,10 +18,17 @@ class Header extends Component {
     }
     renderAuthButtons() {
         return (
-            <div>
+            <navigation>
+                <div>
                 <button   onClick={() => this.props.history.push('/')} className="logout-btn my-button"  style={{float: 'left', fontSize:'15px'}}>New Order</button>
+
+                </div>
+                <div>
                 <button  onClick={this.logOut} className="logout-btn my-button" style={{float: 'right', fontSize:'15px'}}>logout</button>
-            </div>
+
+
+                </div>
+            </navigation>
         );
       
     }
@@ -30,6 +37,7 @@ class Header extends Component {
     if (!loggedIn) return (<div></div>);
         return(
             <div role="heading" aria-level="1" className="logout">
+            <h1>h1 erhhe</h1>
                 { loggedIn ?
                     this.renderAuthButtons() : null}
             </div>

@@ -45,12 +45,14 @@ const FormItem = ({name, onChangeOption, onChange, label, index, options =[], fo
     // console.log(quantity);
     return (<tr>
         <th scope="row">
-        {label}</th>
+        <label>{label}</label>
+        </th>
         <td>
         <select
             value={type}
             name={name}
             onChange={onChangeOption}
+            aria-label={name}
         >
             {/* <option disabled selected value="default">Select a {label}</option> */}
             {options.map(({label, value}, i) => <option value={value} key={i}>{label}</option>)}
@@ -350,7 +352,7 @@ class FormComponent extends Component {
         return(
             <div id="middleContainer" className="primary-bg-color">
                 <div className="first-container">
-                    <h4 className="my-text-white my-text-center">Place an order</h4>
+                    <h1 className="my-text-white my-text-center">Place an order</h1>
                     <div className="middleBox">
                         <div className="secondary-bg-color rightSide the-right">
                             <h1 className="my-text-center my-text-white logo-text">ARC</h1>
@@ -359,7 +361,8 @@ class FormComponent extends Component {
                         <div className="white-bg-color left-box">
                             <div className="left-box-inner">
                                 <div className="leftSide">
-                                    <h5 className="text-center fill-form">Fill form below</h5>
+                                    
+                                <h2 className="text-center fill-form">Fill form below</h2>
                                     <div className="scrollable-content">
                                         <form
                                             onSubmit={this.submit}
@@ -435,7 +438,7 @@ class FormComponent extends Component {
                                             </div>
                                             </div>
                                             <div className="my-form-group">
-                                                <h5>Select Packages</h5>
+                                                <h3>Select Packages</h3>
                                                 <div className="my-responsive-table">
                                                     <table className="table">
                                                         <thead>
