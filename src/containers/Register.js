@@ -7,7 +7,7 @@ import axios from 'axios';
 import toast from 'toastr';
 import AuthComponent from '../components/Auth';
 import setAuthorizationToken from '../helper/setAuthorizationToken';
-
+import {API_BASE_URL} from '../config';
 class Register extends Component {
     constructor(props) {
         super(props); //super function to inherit all the properties (methids and fields) from the Component
@@ -31,7 +31,7 @@ class Register extends Component {
     async handleSubmit(authMode) {
         // console.log(authMode);
         this.setState({ isLoading: true });
-        let url = 'http://localhost:3000/users'
+        let url = `${API_BASE_URL}/users`
         if(authMode === "login") {
             url += "/signin"
         }else if(authMode === "register") {
