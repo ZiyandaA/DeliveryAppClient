@@ -406,7 +406,7 @@ class FormComponent extends Component {
                                             <div>
                                             <label>Select Location:</label>
                                             <div className="my-form-group store-location-group">
-                                                
+                                                    
                                                 <div className="store-location">
                                                     <StoreLocation
                                                         name={'Manhattan'}
@@ -423,6 +423,9 @@ class FormComponent extends Component {
                                                         background={'/Map.jpg'}
                                                         onSelect={this.onLocationChange}
                                                         selected={our_address === '370 19th Street Brookly NY 11215'}
+                                                        required 
+                                                        
+
                                                     />
                                                 </div>
                                             </div>
