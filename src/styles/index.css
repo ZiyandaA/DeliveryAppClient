@@ -1,3 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins|Thasadith'); */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+#title{
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+}
 #middleContainer{
   /* min-height: 100vh; */
   padding-top: 20px;
@@ -163,7 +172,7 @@ td .width-inherit {
   margin-top: -10px
 }
 .secondBanner {
-  height: 450px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-wrap: no-wrap;
@@ -175,21 +184,19 @@ td .width-inherit {
   align-items: center
 }
 
-.welcome {
-  background-color: white;
-}
-.secondBanner .welcome > p {
-  color: black;
+
+ .welcome p {
+  color: white;
    text-align: center; 
    /* width: 50%; */
     font-size: 18px; 
     font-weight: bold;
-     font-family: 'sans-serif'
+     /* font-family: 'sans-serif' */
 }
-.secondBanner {
+/* .secondBanner {
   height: 100%;
   position: relative
-}
+} */
 
 .auth-part {
   height: 100%;
@@ -197,11 +204,11 @@ td .width-inherit {
 }
 
 .secondBanner {
-  background-color:white;
-  height: 250px;
+  background-color:#00345c;
+  height: auto;
   width: 100%;
   z-Index: 19;
-  position: relative;
+ position: relative;
   top: 0;
   display: flex; 
   justify-content: space-evenly;
@@ -209,19 +216,20 @@ td .width-inherit {
 }
 
 .login-part {
-  background-color: #09090990;
+  /* background-color: #09090990; */
   height: 100%;
   z-Index: 19;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
   display: flex; 
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  min-height: 100px;
 }
 
 .auth-part {
-  background-color: #09090990;
+  /* background-color: #09090990; */
   height: 100%;
   z-Index: 19;
   top: 0;
@@ -253,10 +261,11 @@ td .width-inherit {
 }
 .logo {
   float: left;
-  height: 70px;
-  width: 100px; 
+  width:4.8em;
+  height:3em;
   position: relative;
-  top: -10px;  
+  padding-left: 5px
+  
 }
 @media (min-width:720px) {
   #middleContainer .middleBox { 
@@ -270,8 +279,8 @@ td .width-inherit {
     color: #00345c;
     text-align: center; 
     font-size: 18px; 
-    font-weight: bold;
-    font-family: 'sans-serif'
+    /* font-weight: bold; */
+   font-family: 'Cormorant Garamond', serif;
   }
   
   .secondBanner .auth-part {
@@ -296,6 +305,7 @@ td .width-inherit {
 
 @media only screen and (max-width: 599px) {
   .secondBanner {
+    flex-wrap: wrap;
     flex-direction: column;
   }
   .welcome, .auth-part{
@@ -305,8 +315,8 @@ td .width-inherit {
     padding: 26px 19px 26px 19px;
   }
   .logo {
-    width: 57px !important;
-    height: 42px !important;
+    width: 3em !important;
+    height: 2em !important;
   }
   .header {
     height: 40px !important;
@@ -327,6 +337,7 @@ td .width-inherit {
   }
   .hoverable-button {
     height: 34px !important;
+
   }
 } 
 .service-type {
@@ -335,25 +346,36 @@ td .width-inherit {
 
 @media only screen and (min-width: 600px) {
   .secondBanner {
+    flex-wrap: wrap;
     flex-direction: row;
+   /* margin-top: 40px;  */
   }
   .welcome, .auth-part{
     width: 50%;
     height:100%;
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   }
 
 
  @media screen and (min-width: 425px) and (max-width: 525px) {
-
+  .secondBanner {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 .store-location  {
  float: left;
+
 }
 }
 
 @media screen and (max-width: 380px) {
+  .secondBanner {
+    flex-wrap: wrap;
+      flex-direction: row}
   .table {
     font-size: 0.65rem
   }
@@ -363,6 +385,9 @@ td .width-inherit {
 }
 
 @media screen and (max-width: 330px) {
+  .secondBanner {
+    flex-wrap: wrap;
+    flex-direction: row;}
   .table {
     font-size: 0.5rem
   }

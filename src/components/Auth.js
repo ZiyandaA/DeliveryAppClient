@@ -57,6 +57,7 @@ class Signin extends Component {
                                     {mode && mode === 'register' &&
                                     <Link to="login" className="my-text-center account-text" href="#">Have an account ? Sign in</Link>
                                     }
+                                    <div className="demo">Demo Account: test / 1234</div>
                                 </div>
                             </div>
                         </div>
